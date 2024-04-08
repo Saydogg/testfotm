@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cardcss.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="card">
+      <div class="background-image"></div>
+      <div class="card-number">#### #### #### ####</div>
+      <div class="card-expiration-date">MM/YY</div>
+      <div class="card-phone">+998 __________</div>
+    </div>
+    <span class="regform">Iltimos, ro'yxatdan o'ting</span>
+    <div class="form">
+      <input type="text" id="card-number" class="input-field" placeholder="Karta raqami (16 raqam)" maxlength="16" pattern="\d{16}" autocomplete="off">
+      <input type="text" id="expiration-date" class="input-field" placeholder="(MM/YY)" maxlength="4" autocomplete="off">
+      <span class="prefix">Telefon raqami</span>
+      <div class="input-wrapper">
+        <input type="tel" id="phone" class="input-field" placeholder="Telefon raqami" pattern="\+998\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" maxlength="9" autocomplete="off">
+      </div>
+    </div>
+    <button class="button">Ro'yxatdan</button>
+  </div>
+    </div>
+  </div>
+  <script src="cardjs.js"></script>
+</body>
+</html>

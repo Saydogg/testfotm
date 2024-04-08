@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(19, 10, 59);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+  background-color: rgb(19, 10, 59);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative; /* Добавили позиционирование */
+  width: 90%;
+  max-width: 300px;
+  padding: 20px;
+  padding-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  background-image: url('CARDSFON.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Установили значение z-index */
+}
+
+.background-image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url('cardsuzb.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  z-index: 2; /* Увеличили значение z-index */
+}
+
+
+.card-item {
+  margin-bottom: 10px;
+}
+
+.card-number,
+.card-expiration-date,
+.card-phone {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.9s;
+   /* добавлен переход для подсветки */
+  color: white;
+}
+
+.card-phone {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.9s;
+  color: white;
+  position: relative;
+  text-align: left;
+   /* Выравнивание текста по центру */
+}
+
+.card-phone.focus {
+  box-shadow: 0 2px 0 #ffffff; /* добавляем inset для внутреннего бокс-шадоу */
+  width: calc(100% - 100px); /* уменьшаем ширину на 20px */
+  margin-left: 10px;
+}
+
+.card-number.focus,
+.card-expiration-date.focus {
+  box-shadow: 0 2px 0 #ffffff; /* увеличиваем тень */
+}
+
+
+
+
+.info {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #050000;
+}
+
+
+
+.form {
+  width: 90%;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Убираем серую обводку */
+  text-align: center;
+  background-color: rgb(19, 10, 59);
+}
+
+.input-field {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px; /* увеличиваем отступ снизу */
+  border-radius: 10px;
+  background-color: rgb(19, 10, 59);
+  border: 1px solid #ccc;
+  color: white; /* Цвет текста */
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.prefix {
+  color: white;
+  pointer-events: none;
+  font-size: 12px;
+  font-size: bold;
+  padding-bottom: 10px;
+  position: relative; /* добавляем позиционирование */
+  top: -5px;
+}
+
+.regform {
+  color: white;
+  pointer-events: none;
+  font-size: 12px;
+  font-size: bold;
+}
+
+.input-field:last-child {
+  margin-bottom: 0;
+}
+
+.input-field:focus {
+  outline: none;/* изменяем цвет обводки при фокусе */
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* светло-синий цвет */
+  color: #fff; /* белый текст */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* анимация при наведении */
+}
+
+.button:hover {
+  background-color: #0056b3; /* темно-синий цвет при наведении */
+}
+
+
+@media (max-width: 768px) {
+  .card-container,
+  .card,
+  .form {
+    width: 80%;
+  }
+}
+
